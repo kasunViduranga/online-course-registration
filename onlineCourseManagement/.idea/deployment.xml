@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="vertualServer">
+    <serverData>
+      <paths name="vertualServer">
+        <serverdata>
+          <mappings>
+            <mapping deploy="\courseRegistration" local="$PROJECT_DIR$/courseRegistration" web="/courseRegistration" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5f5f5e18-f1c5-4081-8bf0-5ac57a8063be" name="vertualServer" url="http://localhost\htdocs">
+        <fileTransfer port="0" mountedRoot="D:\xamp\htdocs" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

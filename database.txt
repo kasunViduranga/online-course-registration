@@ -1,0 +1,91 @@
+DROP DATABASE onlinecourseManagement;
+CREATE DATABASE onlinecourseManagement;
+use onlinecourseManagement;
+
+CREATE TABLE students (
+  StudentRegno int (8) NOT NULL AUTO_INCREMENT,
+  studentName varchar(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  nic VARCHAR(255) NOT NULL,
+  studentPhoto varchar(255) NOT NULL,
+  password varchar(255) NOT NULL,
+  gpa DOUBLE (10,2) NOT NULL,
+  registraDate varchar(100) NOT NULL,
+  primary key(StudentRegno)
+);
+INSERT INTO students VALUES(null,'kasun','kasunviduranga.kv@gmail.com','971643439v','noimage.jpg','kasun',0.00,'2018.12.05');
+
+CREATE TABLE course (
+  id int(11) NOT NULL,
+  courseName varchar(255) NOT NULL,
+  noofSeats int(11) NOT NULL,
+  startDate varchar(100)NOT NULL,
+  PRIMARY KEY (id)
+);
+
+insert into course values(001,'php',20,'2018.02.05');
+insert into course values(002,'MySQL',50,'2018.02.05');
+insert into course values(003,'Java',70,'2018.02.05');
+insert into course values(004,'PHP Core',100,'2018.02.05');
+insert into course values(005,'HTML',16,'2018.02.05');
+
+CREATE TABLE department (
+  id int(11) NOT NULL,
+  department varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO department VALUES(001,'IT');
+INSERT INTO department VALUES(002,'HR');
+INSERT INTO department VALUES(003,'ACCOUNT');
+
+CREATE TABLE level (
+  id int(11) NOT NULL,
+  levelName varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO level VALUES(001,'Level 01');
+INSERT INTO level VALUES(002,'Level 02');
+INSERT INTO level VALUES(003,'Level 03');
+INSERT INTO level VALUES(004,'Level 04');
+
+CREATE TABLE semester (
+  id int(11) NOT NULL,
+  semester varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO semester VALUES(001,'First Semester');
+INSERT INTO semester VALUES(002,'Second Semester');
+INSERT INTO semester VALUES(003,'Third Semester');
+INSERT INTO semester VALUES(004,'Fourth Semester');
+
+CREATE TABLE session (
+  id int(11) NOT NULL,
+  sessionName varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO session VALUES(001,'2016');
+INSERT INTO session VALUES(002,'2017');
+INSERT INTO session VALUES(003,'2018');
+INSERT INTO session VALUES(004,'2019');
+INSERT INTO session VALUES(005,'2020');
+INSERT INTO session VALUES(006,'2021');
+
+CREATE TABLE studentRegister(
+	id int (8) NOT NULL AUTO_INCREMENT,
+	studentName VARCHAR(255) NOT NULL,
+	StudentRegno int(8) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	sessionName VARCHAR(255) NOT NULL,
+	department VARCHAR(255) NOT NULL,
+	levelName VARCHAR(255) NOT NULL,
+	semester VARCHAR(255) NOT NULL,
+	courseName VARCHAR(255) NOT NULL,
+	PRIMARY KEY (id)
+);	
+
+INSERT INTO studentRegister VALUES(null,'kasun viduranga',54454,'kasunviduranga.kv@gmail.com','2019','it','Level 01','First Semester','MySQL');
+	
